@@ -85,6 +85,12 @@
   }
   .callout strong{ color: var(--ink); }
 
+  .badge-new{
+    display:inline-block; font-size: 11px; font-weight: 700; color: var(--wine);
+    background: var(--amber-soft); padding: 3px 10px; border-radius: 999px;
+    margin-left: 8px; vertical-align: middle; text-transform: uppercase; letter-spacing: 0.4px;
+  }
+
   footer{
     max-width: 680px; margin: 0 auto; padding: 0 24px 64px;
     color: var(--ink-soft); font-size: 13px; border-top: 1px solid var(--line); padding-top: 24px;
@@ -124,14 +130,25 @@
     <p>O Momento é um aplicativo que ajuda você a lembrar de datas importantes de pessoas queridas e sugere ideias de comemoração. IL Hwan Lee é responsável pelo desenvolvimento do app. Para dúvidas sobre privacidade ou esta política, entre em contato pelo e-mail <a href="mailto:ilstudio.lee@gmail.com">ilstudio.lee@gmail.com</a>.</p>
 
     <h3>Que dados o Momento lida</h3>
-    <p><strong>Dados que você mesmo fornece sobre você:</strong> nada além do uso técnico do app — não pedimos cadastro, e-mail ou senha.</p>
+    <p><strong>Dados que você mesmo fornece sobre você:</strong> se você usar o app sem fazer login, nada além do uso técnico do app. Se você optar por fazer login com o Google, coletamos seu nome, e-mail e foto de perfil, conforme fornecidos pela sua conta Google.</p>
     <p><strong>Dados que você fornece sobre outras pessoas (pessoas queridas):</strong> nome, tipo de relação, datas importantes (aniversário, primeiro encontro, data de casamento), preferências de comemoração e, opcionalmente, uma foto. Você é quem escolhe cadastrar essas informações, por vontade própria, para seu uso pessoal dentro do app.</p>
     <p><strong>Dados técnicos coletados por terceiros (anúncios):</strong> o Momento usa o Google Mobile Ads (AdMob) para exibir anúncios. Esse serviço pode coletar automaticamente informações do seu aparelho para exibir e medir anúncios — veja mais na seção "Anúncios" abaixo.</p>
 
     <h3>Onde seus dados ficam guardados</h3>
-    <p>Hoje, todos os dados que você cadastra sobre pessoas queridas ficam guardados apenas no seu próprio aparelho, em um banco de dados local. O Momento não tem servidor recebendo, armazenando ou tendo acesso a esse conteúdo. Não existe login nem sincronização entre dispositivos no momento.</p>
-    <p>Isso significa que ninguém da equipe do Momento consegue ver os dados que você cadastra sobre as pessoas queridas. Se você trocar de celular ou desinstalar o app, esses dados não vão junto — eles somem com a desinstalação.</p>
-    <p>Se no futuro o Momento passar a oferecer conta e sincronização entre aparelhos, esta política será atualizada antes dessa mudança entrar em vigor, e pediremos um novo consentimento quando fizer sentido.</p>
+    <p>Por padrão, todos os dados que você cadastra ficam guardados apenas no seu próprio aparelho, em um banco de dados local, sem nenhum servidor envolvido.</p>
+    <p>Se você optar por fazer login com sua conta Google, seus dados — incluindo os que você cadastrou sobre outras pessoas — passam também a ser salvos em nossos servidores, para que você possa recuperá-los caso troque de aparelho. Esses servidores (fornecidos pela Supabase) ficam localizados no Brasil (São Paulo), então seus dados não saem do país.</p>
+    <p>Você pode continuar usando o Momento sem nunca fazer login — nesse caso, nada muda em relação ao funcionamento local descrito acima: tudo fica só no seu aparelho, e ninguém da equipe do Momento consegue ver os dados que você cadastra.</p>
+
+    <h3>Login e sincronização em nuvem (opcional) <span class="badge-new">Novo</span></h3>
+    <p>O Momento permite, de forma totalmente opcional, fazer login com sua conta Google. Ao fazer isso:</p>
+    <ul>
+      <li>Seus dados cadastrados (nome, tipo de relação, datas, preferências e fotos das pessoas queridas) passam a ser enviados e armazenados também em servidores na nuvem, além de continuarem no seu aparelho.</li>
+      <li>Isso permite recuperar seus dados caso você troque de celular ou reinstale o app.</li>
+      <li>Seus dados ficam isolados: apenas você, com sua conta, consegue acessá-los — nenhum outro usuário do Momento tem acesso ao que você cadastrou.</li>
+      <li>O login em si usa sua conta Google apenas para identificação (nome, e-mail, foto de perfil) — não temos acesso à sua senha do Google, nem a outros dados da sua conta Google.</li>
+      <li>Você pode parar de usar o login a qualquer momento; seus dados locais continuam funcionando normalmente, sem depender da nuvem.</li>
+    </ul>
+    <p>Para usuários que optam por fazer login e usar a sincronização em nuvem, o Momento atua como controlador dos dados armazenados em servidor, nos termos da LGPD, e adota medidas técnicas para proteção desses dados, como isolamento por usuário e armazenamento em servidores localizados no Brasil.</p>
 
     <h3>Notificações</h3>
     <p>O Momento pede permissão para enviar notificações no seu aparelho, usadas apenas para lembrar você das datas que você mesmo cadastrou. Essas notificações são geradas e agendadas localmente no seu aparelho, sem depender de internet.</p>
@@ -147,10 +164,11 @@
     <p>Essas informações são processadas pela Google conforme a própria <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidade da Google</a>.</p>
 
     <h3>Seus direitos</h3>
-    <p>Mesmo os dados sobre pessoas queridas sendo inseridos por você e guardados só no seu aparelho, se você (ou alguém sobre quem você cadastrou dados) quiser saber quais dados existem, corrigir alguma informação, pedir a exclusão de dados, ou tirar dúvidas sobre esta política, pode entrar em contato pelo e-mail <a href="mailto:ilstudio.lee@gmail.com">ilstudio.lee@gmail.com</a>.</p>
+    <p>Mesmo os dados sobre pessoas queridas sendo inseridos por você, se você (ou alguém sobre quem você cadastrou dados) quiser saber quais dados existem, corrigir alguma informação, pedir a exclusão de dados, ou tirar dúvidas sobre esta política, pode entrar em contato pelo e-mail <a href="mailto:ilstudio.lee@gmail.com">ilstudio.lee@gmail.com</a>.</p>
 
     <h3>Como excluir seus dados</h3>
-    <p>Como tudo é armazenado localmente: você pode excluir uma pessoa individualmente dentro do app, a qualquer momento. Desinstalar o app remove permanentemente todos os dados guardados localmente. Não há backup em nuvem desses dados hoje — a exclusão local é definitiva.</p>
+    <p><strong>Se você nunca fez login:</strong> você pode excluir uma pessoa individualmente dentro do app, a qualquer momento. Desinstalar o app remove permanentemente todos os dados guardados localmente. Não há backup em nuvem nesse caso — a exclusão local é definitiva.</p>
+    <p><strong>Se você fez login:</strong> excluir uma pessoa dentro do app remove os dados dela tanto do aparelho quanto da nuvem. Para excluir sua conta por completo, incluindo todos os dados salvos na nuvem, entre em contato pelo e-mail <a href="mailto:ilstudio.lee@gmail.com">ilstudio.lee@gmail.com</a>.</p>
 
     <h3>Menores de idade</h3>
     <p>Você pode cadastrar informações sobre filhos(as) ou outros dependentes menores de idade, para fins de lembrete pessoal. Ao fazer isso, você confirma ter a responsabilidade legal apropriada sobre essa criança/adolescente para inserir essas informações. O Momento não coleta dados diretamente de crianças — apenas o adulto responsável interage com o app.</p>
@@ -181,6 +199,9 @@
     <p>Você concorda em usar o Momento apenas para fins pessoais e legítimos, como lembrar datas e organizar ideias de comemoração para pessoas queridas. Não é permitido usar o app para fins ilegais, para assediar terceiros, ou de qualquer forma que viole direitos de outras pessoas.</p>
     <p>Você é responsável pela veracidade e adequação dos dados que cadastra sobre terceiros, e por ter uma relação legítima com essas pessoas que justifique guardar essas informações.</p>
 
+    <h3>Login e conta (opcional)</h3>
+    <p>Ao optar por fazer login com sua conta Google, você é responsável por manter essa conta segura. O Momento não se responsabiliza por acessos não autorizados à sua conta Google que estejam fora do nosso controle.</p>
+
     <h3>As sugestões não são conselho profissional</h3>
     <p>As sugestões de comemoração exibidas pelo Momento são ideias genéricas, geradas a partir de preferências que você mesmo informou. Elas não constituem aconselhamento profissional de nenhum tipo — não são recomendação médica, psicológica, financeira, jurídica ou de qualquer outra natureza especializada. Use seu próprio julgamento antes de seguir qualquer sugestão.</p>
 
@@ -191,7 +212,7 @@
     <p>O nome Momento, sua identidade visual e o código do aplicativo pertencem a IL Hwan Lee. Você não pode copiar, redistribuir ou modificar o app sem autorização.</p>
 
     <h3>Isenção de garantias e limitação de responsabilidade</h3>
-    <p>O Momento é fornecido "como está". Não garantimos que o app estará livre de erros, interrupções ou perda de dados. Como os dados ficam armazenados localmente no seu aparelho, recomendamos cautela: perda, roubo, dano ou desinstalação do aparelho pode resultar em perda permanente dos dados cadastrados, e o Momento não pode recuperá-los.</p>
+    <p>O Momento é fornecido "como está". Não garantimos que o app estará livre de erros, interrupções ou perda de dados. Se você não fizer login, seus dados ficam armazenados apenas localmente no seu aparelho, e recomendamos cautela: perda, roubo, dano ou desinstalação do aparelho pode resultar em perda permanente dos dados cadastrados. Mesmo com login e sincronização em nuvem, não garantimos ausência total de falhas.</p>
     <p>Na máxima extensão permitida pela lei, o Momento não se responsabiliza por danos indiretos decorrentes do uso do app.</p>
 
     <h3>Alterações nestes termos</h3>
