@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://tytnqwauownoaumdbhrc.supabase.co; form-action 'none'; base-uri 'none'">
+<title>Momento — Painel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="painel.css?v=1">
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-conteudo">
+    <div class="marca">
+      <div class="marca-sinal" aria-hidden="true">M</div>
+      <div>
+        <div class="marca-nome">Momento</div>
+        <div class="marca-sub">Painel</div>
+      </div>
+    </div>
+    <button type="button" id="btn-sair" class="botao botao-contorno" hidden>Sair</button>
+  </div>
+</header>
+
+<main class="pagina">
+
+  <section id="tela-carregando" class="tela" aria-live="polite">
+    <p class="mudo">Carregando…</p>
+  </section>
+
+  <section id="tela-login" class="tela cartao estreito" hidden>
+    <h1>Entrar</h1>
+    <p class="mudo">Acesso restrito.</p>
+    <form id="form-login" novalidate>
+      <label for="login-email">E-mail</label>
+      <input id="login-email" type="email" autocomplete="username" required>
+      <label for="login-senha">Senha</label>
+      <input id="login-senha" type="password" autocomplete="current-password" required>
+      <button type="submit" class="botao botao-primario">Entrar</button>
+      <p class="erro" id="login-erro" role="alert" hidden></p>
+    </form>
+  </section>
+
+  <section id="tela-mfa-codigo" class="tela cartao estreito" hidden>
+    <h1>Verificação em duas etapas</h1>
+    <p class="mudo">Digite o código de 6 dígitos do seu aplicativo autenticador.</p>
+    <form id="form-mfa-codigo" novalidate>
+      <label for="mfa-codigo">Código</label>
+      <input id="mfa-codigo" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]*" required>
+      <button type="submit" class="botao botao-primario">Verificar</button>
+      <p class="erro" id="mfa-codigo-erro" role="alert" hidden></p>
+    </form>
+  </section>
+
+  <section id="tela-mfa-cadastro" class="tela cartao estreito" hidden>
+    <h1>Configurar autenticador</h1>
+    <p class="mudo">Escaneie o QR code com um aplicativo autenticador (Google Authenticator, Authy, 1Password…) e digite o código gerado.</p>
+    <img id="mfa-qr" class="qr" alt="QR code para configurar o autenticador" width="200" height="200">
+    <p class="mudo">Ou digite esta chave manualmente:</p>
+    <code id="mfa-segredo" class="segredo"></code>
+    <form id="form-mfa-cadastro" novalidate>
+      <label for="mfa-cadastro-codigo">Código</label>
+      <input id="mfa-cadastro-codigo" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]*" required>
+      <button type="submit" class="botao botao-primario">Ativar</button>
+      <p class="erro" id="mfa-cadastro-erro" role="alert" hidden></p>
+    </form>
+  </section>
+
+  <section id="tela-sem-acesso" class="tela cartao estreito" hidden>
+    <h1>Sem acesso</h1>
+    <p class="mudo">Esta conta não tem acesso ao painel.</p>
+  </section>
+
+  <section id="tela-painel" class="tela" hidden>
+    <div id="conteudo-painel"></div>
+  </section>
+
+</main>
+
+<footer class="rodape">Painel de uso do Momento — apenas números agregados.</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.116.0/dist/umd/supabase.js" integrity="sha384-iLddHTLokph6Omwoyid4XKxHaWa6w41BnoEj0q5oOrzmYPpHIKt1wyjReA7s//pP" crossorigin="anonymous"></script>
+<script src="config.js?v=1"></script>
+<script src="painel.js?v=1"></script>
+</body>
+</html>
